@@ -1,0 +1,4 @@
+q_id,s_id,c_id,s_c_id,question,typeofquestion,option_a,option_b,option_c,option_d,correct_ans,question_status,marks
+128,33,21,30,<p>What is the purpose of the Chinese Room Test?</p>,Single,<p>Detect Presence of Consciousness.</p>,<p>Detect&nbsp;Presence&nbsp;of Energy.</p>,<p>Detect&nbsp;Presence&nbsp;of Room Temperature.</p>,<p>None of Above</p>,D,1,1
+129,33,21,30,<p>What is Artificial Intelligence Mean?</p>,Single,<p>Robotic Science</p>,<p>Physical Science</p>,<p>Astrology</p>,<p>None of Above</p>,C,1,1
+130,33,21,30,<p>Where is Tajmahal?</p>,Single,<p>Agra</p>,<p>Delhi</p>,<p>Srinagar</p>,<p>None of Above</p>,D,1,1

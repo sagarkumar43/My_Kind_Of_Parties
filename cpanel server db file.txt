@@ -1,0 +1,5 @@
+define('DB_SERVER', 'localhost');
+define('DB_USERNAME', 'briduywa_anmol');
+define('DB_PASSWORD', 'anmol@123');
+define('DB_NAME', 'briduywa_mykindofparties');
+ 

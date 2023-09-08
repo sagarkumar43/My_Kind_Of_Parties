@@ -1,0 +1,303 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<!-- Mirrored from easybook.kwst.net/listing4.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Nov 2020 09:48:31 GMT -->
+
+<head>
+    <!--=============== basic  ===============-->
+    <meta charset="UTF-8">
+    <title>MYKOP Decoration's</title>
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="robots" content="index, follow" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <!--=============== css  ===============-->
+    <link type="text/css" rel="stylesheet" href="css/reset.css">
+    <link type="text/css" rel="stylesheet" href="css/plugins.css">
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+    <link type="text/css" rel="stylesheet" href="css/color.css">
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+
+    <!--=============== favicons ===============-->
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <style>
+        @media only screen and (max-width: 1560px) {
+            #mediaqueri1 {
+                display: none;
+            }
+        }
+
+        @media only screen and (max-width: 600px) {
+            #mediaqueri1 {
+                display: block;
+            }
+        }
+
+        @media only screen and (max-width: 600px) {
+            #mediaqueri {
+                display: none;
+            }
+        }
+
+        .list-carousel {
+            padding: 0 0px !important;
+        }
+
+        section.single-par {
+            padding: 150px 0;
+            overflow: hidden;
+        }
+
+        .slick-prev:hover,
+        .slick-prev:focus,
+        .slick-next:hover,
+        .slick-next:focus {
+            color: black;
+            outline: none;
+            background: black;
+        }
+    </style>
+</head>
+
+<body>
+    <!--loader-->
+    <div class="loader-wrap">
+        <div class="pin">
+            <div class="pulse"></div>
+        </div>
+    </div>
+    <!--loader end-->
+    <!-- Main  -->
+    <div id="main">
+        <!-- header-->
+        <?php
+		  require_once('header.php');
+		  ?>
+        <!--  header end -->
+        <!--  wrapper  -->
+        <div id="wrapper">
+            <!-- content-->
+            <div class="content">
+                <!--  section  -->
+                <section class="parallax-section single-par" data-scrollax-parent="true">
+                    <div class="bg par-elem " data-bg="" data-scrollax="properties: { translateY: '30%' }">
+                        <div class="hero-parallax">
+                            <div class="slideshow-container" data-scrollax="properties: { translateY: '200px' }">
+                                <!-- slideshow-item -->
+                                <?php
+    $q="select * from  banner_image where selected_menu='Decorations'";
+    $ex=mysqli_query($conn,$q);
+    while($read=mysqli_fetch_array($ex))
+  {
+  ?>
+                                <div class="slideshow-item">
+                                    <div class="bg" data-bg="vendor/images/Banner/<?php echo $read['banner_pic']; ?>"></div>
+                                </div>
+                                <?php  } ?>
+                                <!--  slideshow-item end  -->
+                                <!-- slideshow-item -->
+                                    <!-- <div class="slideshow-item">
+                                        <div class="bg" data-bg="images/bg/13.jpg"></div>
+                                    </div> -->
+                                <!--  slideshow-item end  -->
+                                <!-- slideshow-item -->
+                                    <!-- <div class="slideshow-item">
+                                        <div class="bg" data-bg="images/bg/6.jpg"></div>
+                                    </div> -->
+                                <!--  slideshow-item end  -->
+                            </div>
+                            <div class="overlay op7"></div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="overlay">
+                    </div>
+                    <div class="container">
+                        <div class="section-title center-align big-title">
+                            <div class="section-title-separator"><span></span></div>
+                            <h2><span>Decoration's</span></h2>
+                            <span class="section-separator"></span>
+                            <h4>Explore Places With MYKOP</h4>
+                        </div>
+                    </div>
+                    <div class="header-sec-link">
+                        <div class="container"><a href="#sec1" class="custom-scroll-link color-bg"><i
+                                    class="fal fa-angle-double-down"></i></a></div>
+                    </div>
+                </section>
+                <!--  section  end-->
+                <!-- Category Slider Start -->
+                <div class="breadcrumbs-fs fl-wrap">
+                    <div class="container">
+                        <div class="manual">
+                                <?php
+                                    $q="select * from categories_mgmt";
+                                    $ex=mysqli_query($conn,$q);
+                                    while($read=mysqli_fetch_array($ex))
+                                { ?>
+                            <div>
+                                <a href="decoration-category-page.php?categories=<?php echo $read['category_name'] ?>">
+                                <img src="images/categories/<?php echo $read['category_image']; ?>" alt="" style="">
+                                <label for="" style=""><?php echo $read['category_name']; ?></label>
+                                </a>
+                            </div>
+                            <?php } ?>
+                        </div>
+                    </div>
+                </div>
+                <!-- Category Slider End -->
+                <!--  section-->
+                <!-- New Teddy Slider Start -->
+                <?php
+                    $display_category="SELECT * FROM display_categories";
+                    $exe_cate=mysqli_query($conn,$display_category);
+                    $fetch_cat=mysqli_fetch_array($exe_cate);
+                    $read_category=$fetch_cat["frontend_categories"];
+                    $exp_cateory=explode(",",$read_category);
+                    foreach($exp_cateory as $dis_cate_name){
+                ?>
+                <section class="grey-blue-bg">
+                    <!-- container-->
+                   
+                    <div class="container">
+                        <div class="section-title">
+                            <!-- <div class="section-title-separator"><span></span></div> -->
+                           
+                            <h2  style="margin-top: 45px;"><?php echo $dis_cate_name ?></h2>
+                            <span class="section-separator"></span>
+                            <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in pulvinar neque.
+                                                    Nulla finibus lobortis pulvinar.</p> -->
+                        </div>
+                    </div>
+                    <!-- container end-->
+                    <!-- carousel -->
+                    <div class="list-carousel fl-wrap card-listing ">
+                        <!--listing-carousel-->
+                        <div class="listing-carousel  fl-wrap ">
+                            <!--slick-slide-item-->
+                            <?php
+                                $q="SELECT * FROM product_mgmt WHERE category_name='$dis_cate_name'";
+                                $ex=mysqli_query($conn,$q);
+                                $count=1;
+                                while($fetch=mysqli_fetch_array($ex))
+                            {
+                            ?>
+                            <div class="slick-slide-item">
+                                <!-- listing-item  -->
+                       
+                                <div class="listing-item">
+                                    <article class="geodir-category-listing fl-wrap">
+                                        <div class="geodir-category-img">
+                                            <a href="decoration-details-page.php?openid=<?php echo $fetch['id'] ?>&cat_name=<?php echo $dis_cate_name?>"><img src="admin/img/product_img/<?php echo $fetch['feature_image']; ?>"
+                                                    alt=""></a>
+                                            <div class="sale-window">FLAT 20% Off</div>
+                                            <div class="geodir-category-opt">
+                                                <div class="listing-rating card-popup-rainingvis" data-starrating2="5">
+                                                </div>
+                                                <div class="rate-class-name">
+                                                    <div class="score"><strong>Very
+                                                            Good</strong>27 Reviews </div>
+                                                    <span>5.0</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="geodir-category-content fl-wrap title-sin_item">
+                                            <div class="geodir-category-content-title fl-wrap">
+                                                <div class="geodir-category-content-title-item">
+                                                    <center>
+                                                        <h3 class="title-sin_map"><a href="decoration-details-page.php?openid=<?php echo $fetch['id'] ?>&cat_name=<?php echo $dis_cate_name?>"><?php echo $fetch['product_name'] ?> </a></h3>
+                                                        <div class="geodir-category-location fl-wrap">
+                                                            <a href="#" class="map-item"><b
+                                                                    style="font-size: 13px;">price: &#8377;
+                                                                    <?php echo $fetch['product_price'] ?>/-</b></a>
+                                                        </div>
+                                                    </center>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </div>
+                               
+                                <!-- listing-item end -->
+                            </div>
+                            <?php $count++; } ?>
+                            <!--slick-slide-item end-->
+                            
+                        </div>
+                        <!--listing-carousel end-->
+                        <div class="swiper-button-prev sw-btn"><i class="fa fa-long-arrow-left"></i></div>
+                        <div class="swiper-button-next sw-btn"><i class="fa fa-long-arrow-right"></i></div>
+                    </div>
+                    <!--  carousel end-->
+                </section>
+                <!-- New Teddy Slider End -->
+<?php } ?>
+            </div>
+            <!-- content end-->
+        </div>
+        <!--wrapper end -->
+        <!--footer -->
+        <?php
+		require_once('footer.php');
+		?>
+        <!--footer end -->
+        <!--map-modal -->
+        <div class="map-modal-wrap">
+            <div class="map-modal-wrap-overlay"></div>
+            <div class="map-modal-item">
+                <div class="map-modal-container fl-wrap">
+                    <div class="map-modal fl-wrap">
+                        <div id="singleMap" data-latitude="40.7" data-longitude="-73.1"></div>
+                    </div>
+                    <h3><i class="fal fa-location-arrow"></i><a href="#">Hotel Title</a></h3>
+                    <input id="pac-input" class="controls fl-wrap controls-mapwn" type="text"
+                        placeholder="What Nearby ?   Bar , Gym , Restaurant ">
+                    <div class="map-modal-close"><i class="fal fa-times"></i></div>
+                </div>
+            </div>
+        </div>
+        <!--map-modal end -->
+
+        <a class="to-top" style="background-color: black;"><i class="fas fa-caret-up"></i></a>
+    </div>
+    <!-- Main end -->
+    <!--=============== scripts  ===============-->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/plugins.js"></script>
+    <script type="text/javascript" src="js/scripts.js"></script>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDwJSRi0zFjDemECmFl9JtRj1FY7TiTRRo&amp;libraries=places&amp;callback=initAutocomplete"></script>
+    <script type="text/javascript" src="js/map-single.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+    <script>
+
+        if (window.matchMedia("(max-width: 500px)").matches) {
+            $('.manual').slick({
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                arrow: true,
+            });
+
+        }
+        else {
+            $('.manual').slick({
+                slidesToShow: 8,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                arrow: true,
+            });
+
+        }
+
+    </script>
+</body>
+
+
+</html>

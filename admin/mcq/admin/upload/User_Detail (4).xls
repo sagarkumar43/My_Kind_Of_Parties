@@ -1,0 +1,9 @@
+Question Id	Subject Id	Category Id	SubCategory Id	Question	Typeofquestion	Option_A	 Option_B	Option_C	 Option_D	 Correct_ans	 Question_status	 Marks	
+"126"	"21"	"20"	"25"	"<p>fsdf</p>
+"	"Single"	"<p>frge</p>
+"	"<p>vsvgds</p>
+"	"<p>sgsgdev</p>
+"	"<p>gdfgdg</p>
+"	"D"	"1"	"12"
+
+<script>window.location.href='addproductbyexcel.php'</script>
